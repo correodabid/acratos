@@ -1,0 +1,144 @@
+---
+// src/layouts/MainLayout.astro
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Acratos Network: Forging a Sovereign, User-Centric, and Sustainable Digital Future' } = Astro.props;
+
+// Agregar la hoja de estilos global
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} | Acratos Network</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Preload de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Meta tags para redes sociales -->
+    <meta property="og:title" content={`${title} | Acratos Network`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  
+  <body class="min-h-screen bg-gray-900 text-gray-100">
+    <!-- Barra de navegación -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo y enlaces de navegación -->
+          <div class="flex items-center">
+            <a href="/" class="flex-shrink-0 flex items-center">
+              <span class="text-white text-xl font-bold">Acratos</span>
+              <span class="ml-1 px-2 py-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-bold rounded">NETWORK</span>
+            </a>
+            <div class="hidden md:block ml-10">
+              <div class="flex space-x-8">
+                <a href="#features" class="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Features</a>
+                <a href="#architecture" class="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Architecture</a>
+                <a href="#economy" class="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Economy</a>
+                <a href="#governance" class="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Governance</a>
+                <a href="#roadmap" class="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Roadmap</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Botón de acción -->
+          <div class="hidden md:block">
+            <a href="#start-building" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700">
+              Get Started
+            </a>
+          </div>
+          
+          <!-- Botón de menú móvil -->
+          <div class="md:hidden">
+            <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open menu</span>
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Menú móvil -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#features" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Features</a>
+          <a href="#architecture" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Architecture</a>
+          <a href="#economy" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Economy</a>
+          <a href="#governance" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Governance</a>
+          <a href="#roadmap" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Roadmap</a>
+          <a href="#start-building" class="mt-4 block w-full px-4 py-2 text-center text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 rounded-md font-medium">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Contenido principal -->
+    <main class="pt-16">
+      <slot />
+    </main>
+    
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto px-4 text-center">
+        <p>© 2024 Acratos. All rights reserved.</p>
+        <p class="text-gray-400 text-sm mt-2">Documentation based on the original whitepaper.</p>
+      </div>
+    </footer>
+    
+    <script>
+      // Menú móvil
+      document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('block');
+          });
+        }
+        
+        // Cerrar menú al hacer clic en un enlace
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('block');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+          });
+        });
+      });
+      
+      // Cambiar estilo del menú al hacer scroll
+      window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 10) {
+          nav.classList.add('bg-gray-900/95');
+          nav.classList.remove('bg-gray-900/80');
+        } else {
+          nav.classList.remove('bg-gray-900/95');
+          nav.classList.add('bg-gray-900/80');
+        }
+      });
+    </script>
+  </body>
+</html>

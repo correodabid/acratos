@@ -1,0 +1,280 @@
+---
+// src/components/whitepaper/Roadmap.astro
+---
+
+<section id="roadmap" class="relative py-24 overflow-hidden">
+  <!-- Fondo con patrón de puntos -->
+  <div class="absolute inset-0 bg-[radial-gradient(#2d3748_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
+  
+  <!-- Gradientes decorativos -->
+  <div class="absolute -top-32 -right-32 w-64 h-64 bg-purple-600/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+  <div class="absolute -bottom-32 -left-32 w-64 h-64 bg-indigo-600/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+  
+  <div class="relative max-w-7xl mx-auto px-6 sm:px-8">
+    <div class="text-center mb-20">
+      <span class="inline-block bg-indigo-500/10 text-indigo-400 text-sm font-medium px-4 py-1.5 rounded-full mb-4">Journey</span>
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+          Roadmap
+        </span>
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mx-auto rounded-full"></div>
+      <p class="mt-8 max-w-3xl mx-auto text-xl text-gray-400">
+        The path to a decentralized future, with clearly defined phases that prioritize functionality, security, and user experience.
+      </p>
+    </div>
+    
+    <div class="relative mt-16">
+      <!-- Línea central con gradiente -->
+      <div class="hidden md:block absolute left-1/2 w-0.5 h-full bg-gradient-to-b from-indigo-500 via-purple-500 to-indigo-500 transform -translate-x-1/2"></div>
+      
+      <!-- Fase 1 -->
+      <div class="relative mb-16 group">
+        <div class="md:flex items-center">
+          <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 md:text-right">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-3 group-hover:bg-indigo-500/20 transition-colors">
+              <span class="w-2 h-2 rounded-full bg-indigo-400 mr-2"></span>
+              Phase 1: Genesis
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Q3-Q4 2024</h3>
+            <p class="text-gray-400">Initial testnet launch with basic functionalities.</p>
+          </div>
+          
+          <div class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 border-4 border-gray-900 mx-auto z-10 transform group-hover:scale-110 transition-transform">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          
+          <div class="md:w-1/2 md:pl-16">
+            <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 group-hover:border-indigo-500/30 transition-all duration-300">
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <svg class="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Public testnet launch</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Basic Agent interface</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Initial DAG consensus implementation</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Fase 2 -->
+      <div class="relative mb-16 group">
+        <div class="md:flex flex-row-reverse items-center">
+          <div class="md:w-1/2 md:pl-16 mb-8 md:mb-0">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-3 group-hover:bg-purple-500/20 transition-colors">
+              <span class="w-2 h-2 rounded-full bg-purple-400 mr-2"></span>
+              Phase 2: Expansion
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Q1-Q2 2025</h3>
+            <p class="text-gray-400">Scalability and user experience improvements.</p>
+          </div>
+          
+          <div class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 border-4 border-gray-900 mx-auto z-10 transform group-hover:scale-110 transition-transform">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          
+          <div class="md:w-1/2 md:pr-16">
+            <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 group-hover:border-purple-500/30 transition-all duration-300">
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <svg class="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">ZKP integration for privacy</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Governance DAO launch</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Integrated decentralized exchange</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Fase 3 -->
+      <div class="relative mb-16 group">
+        <div class="md:flex items-center">
+          <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 md:text-right">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-sm font-medium mb-3 group-hover:bg-pink-500/20 transition-colors">
+              <span class="w-2 h-2 rounded-full bg-pink-400 mr-2"></span>
+              Phase 3: Maturity
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Q3 2025 onwards</h3>
+            <p class="text-gray-400">Mainnet launch and ecosystem expansion.</p>
+          </div>
+          
+          <div class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-pink-600 to-purple-600 border-4 border-gray-900 mx-auto z-10 transform group-hover:scale-110 transition-transform">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4m0 0V3h4m-4 0H3m2 4h4m-4 4v4m0 0H3m4 0h4m-4 4v4m0 0v-4m0 0h4m4 0h4m-4 0v4m4-8v4m0 0v4m0-4h4m-4 0h4" />
+            </svg>
+          </div>
+          
+          <div class="md:w-1/2 md:pl-16">
+            <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 group-hover:border-pink-500/30 transition-all duration-300">
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <svg class="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Mainnet launch</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Cross-chain integration</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-300">Decentralized application ecosystem</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Métricas Clave -->
+  <div class="relative py-16 overflow-hidden">
+    <div class="relative max-w-7xl mx-auto px-6 sm:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block bg-indigo-500/10 text-indigo-400 text-sm font-medium px-4 py-1.5 rounded-full mb-4">Growth</span>
+        <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+            Key Network Metrics
+          </span>
+        </h3>
+        <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mx-auto rounded-full"></div>
+        <p class="mt-8 max-w-3xl mx-auto text-xl text-gray-400">
+          Real-time network growth and adoption
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-800/40 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-indigo-500/30 transition-all duration-300 group">
+          <div class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-400 mb-4">10,000+</div>
+          <h4 class="text-xl font-semibold text-white mb-3">Active Nodes</h4>
+          <p class="text-gray-400 mb-4">Global decentralized network with thousands of nodes securing the network</p>
+          <div class="h-1.5 bg-gray-700/50 rounded-full overflow-hidden">
+            <div class="h-full w-4/5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full"></div>
+          </div>
+        </div>
+        
+        <div class="bg-gray-800/40 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300 group">
+          <div class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 mb-4">1M+</div>
+          <h4 class="text-xl font-semibold text-white mb-3">Daily Transactions</h4>
+          <p class="text-gray-400 mb-4">Processing over one million transactions every day</p>
+          <div class="h-1.5 bg-gray-700/50 rounded-full overflow-hidden">
+            <div class="h-full w-2/3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+          </div>
+        </div>
+        
+        <div class="bg-gray-800/40 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-pink-500/30 transition-all duration-300 group">
+          <div class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-rose-400 mb-4">50+</div>
+          <h4 class="text-xl font-semibold text-white mb-3">Ecosystem Projects</h4>
+          <p class="text-gray-400 mb-4">Growing ecosystem with over 50 projects built</p>
+          <div class="h-1.5 bg-gray-700/50 rounded-full overflow-hidden">
+            <div class="h-full w-1/2 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sección de Comunidad -->
+  <div class="relative py-16 overflow-hidden">
+    <!-- Fondo con patrón de puntos -->
+    <div class="absolute inset-0 bg-[radial-gradient(#2d3748_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
+    
+    <!-- Gradientes decorativos -->
+    <div class="absolute -top-32 -right-32 w-64 h-64 bg-purple-600/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+    <div class="absolute -bottom-32 -left-32 w-64 h-64 bg-indigo-600/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-6 sm:px-8">
+      <div class="text-center mb-12">
+        <span class="inline-block bg-indigo-500/10 text-indigo-400 text-sm font-medium px-4 py-1.5 rounded-full mb-4">Community</span>
+        <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+            Join Our Community
+          </span>
+        </h3>
+        <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mx-auto rounded-full"></div>
+        <p class="mt-8 max-w-3xl mx-auto text-xl text-gray-400">
+          Connect with developers, validators, and enthusiasts to contribute to the future of the decentralized network.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <a href="#" class="group flex flex-col items-center p-6 bg-gray-800/40 hover:bg-gray-700/50 border border-gray-700/50 hover:border-indigo-500/30 rounded-2xl transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-4 group-hover:bg-indigo-500/20 transition-colors">
+            <svg class="w-7 h-7 text-indigo-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </div>
+          <h4 class="text-lg font-semibold text-white mb-1">GitHub</h4>
+          <p class="text-sm text-gray-400 text-center">Contribute to open source</p>
+        </a>
+        
+        <a href="#" class="group flex flex-col items-center p-6 bg-gray-800/40 hover:bg-gray-700/50 border border-gray-700/50 hover:border-blue-500/30 rounded-2xl transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-colors">
+            <svg class="w-7 h-7 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+            </svg>
+          </div>
+          <h4 class="text-lg font-semibold text-white mb-1">Twitter</h4>
+          <p class="text-sm text-gray-400 text-center">Follow us for the latest updates</p>
+        </a>
+        
+        <a href="#" class="group flex flex-col items-center p-6 bg-gray-800/40 hover:bg-gray-700/50 border border-gray-700/50 hover:border-purple-500/30 rounded-2xl transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition-colors">
+            <svg class="w-7 h-7 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.222 0c1.406 0 2.627.47 3.66 1.414.953.887 1.558 2.058 1.725 3.429h-3.808v2.21h3.678c-.11.704-.274 1.29-.49 1.767-.23.49-.56.908-.99 1.26-.44.35-.94.612-1.497.79-.57.18-1.19.27-1.855.27-.9 0-1.72-.15-2.46-.45-.73-.3-1.36-.71-1.87-1.23-.52-.52-.93-1.14-1.22-1.86-.3-.72-.45-1.5-.45-2.33 0-.83.15-1.61.45-2.33.3-.72.7-1.34 1.22-1.86.52-.52 1.14-.93 1.86-1.23.72-.3 1.5-.45 2.33-.45.57 0 1.11.06 1.62.18.5.11.96.29 1.37.52.41.23.76.51 1.07.85.31.33.56.7.76 1.1l2.32-1.07c-.35-.83-.9-1.56-1.66-2.18C22.5.77 21.42.36 20.22.36m-4.77 9.09c0 .5.08.96.24 1.38.16.42.38.77.66 1.05.28.28.6.5.98.64.39.14.8.21 1.24.21.64 0 1.22-.16 1.74-.49.52-.33.93-.76 1.24-1.29.31-.53.46-1.14.46-1.84v-.11h-6.36v.06c0 .1.02.2.04.3z"/>
+            </svg>
+          </div>
+          <h4 class="text-lg font-semibold text-white mb-1">Discord</h4>
+          <p class="text-sm text-gray-400 text-center">Join the conversation</p>
+        </a>
+        
+        <a href="#" class="group flex flex-col items-center p-6 bg-gray-800/40 hover:bg-gray-700/50 border border-gray-700/50 hover:border-cyan-500/30 rounded-2xl transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4 group-hover:bg-cyan-500/20 transition-colors">
+            <svg class="w-7 h-7 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.108 0-.612.492-1.108 1.1-1.108s1.1.497 1.1 1.108c0 .613-.493 1.108-1.1 1.108zm8 6.891h-1.706v-3.556c0-.906-.018-2.073-1.272-2.073-1.268 0-1.462.983-1.462 2.007v3.622h-1.696v-7.25h1.634v1.001h.024c.307-.578.997-1.188 2.044-1.188 2.184 0 2.587 1.424 2.587 3.276l-.007 3.161z"/>
+            </svg>
+          </div>
+          <h4 class="text-lg font-semibold text-white mb-1">Telegram</h4>
+          <p class="text-sm text-gray-400 text-center">Chat en tiempo real</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,64 @@
+---
+// src/components/ui/Section.astro
+interface Props {
+  title?: string;
+  subtitle?: string;
+  gradientFrom?: string;
+  gradientTo?: string;
+  id?: string;
+  className?: string;
+  hideDecoration?: boolean;
+}
+
+const { 
+  title = '', 
+  subtitle = '', 
+  gradientFrom = 'from-indigo-400', 
+  gradientTo = 'to-purple-400',
+  id = '',
+  className = '',
+  hideDecoration = false
+} = Astro.props as Props;
+---
+
+<section id={id} class={`relative py-16 overflow-hidden ${className}`}>
+  <!-- Fondo con patrón de puntos -->
+  <div 
+    class="absolute inset-0 bg-[radial-gradient(#2d3748_1px,transparent_1px)] [background-size:16px_16px] opacity-10"
+    aria-hidden="true"
+  ></div>
+  
+  <!-- Gradientes decorativos -->
+  <div 
+    class="absolute -top-32 -right-32 w-64 h-64 bg-purple-600/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70"
+    aria-hidden="true"
+  ></div>
+  <div 
+    class="absolute -bottom-32 -left-32 w-64 h-64 bg-indigo-600/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70"
+    aria-hidden="true"
+  ></div>
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {title && (
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          <span class={`bg-clip-text text-transparent bg-gradient-to-r ${gradientFrom} ${gradientTo}`}>
+            {title}
+          </span>
+        </h2>
+        {subtitle && (
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto mt-4">
+            {subtitle}
+          </p>
+        )}
+        {!hideDecoration && (
+          <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mx-auto rounded-full mt-6"></div>
+        )}
+      </div>
+    )}
+    
+    <div class="relative z-10">
+      <slot />
+    </div>
+  </div>
+</section>
