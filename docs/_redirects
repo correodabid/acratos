@@ -1,5 +1,4 @@
 # Permitir recursos estáticos
-/assets/*
 /_astro/*
 
 # Redirigir rutas de la aplicación a index.html
