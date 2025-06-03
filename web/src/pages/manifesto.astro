@@ -1,0 +1,274 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout 
+  title="Acratos Manifesto" 
+  description="The Acratos Manifesto - A vision for a decentralized future where artificial intelligence and privacy go hand in hand.">
+  
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
+    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+        The Acratos Manifesto
+      </span>
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+      A Declaration of Digital Sovereignty and the Future of Decentralized Intelligence
+    </p>
+    <div class="mt-8 flex justify-center space-x-4">
+      <a href="#manifesto" class="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-300">
+        Read the Manifesto
+      </a>
+      <a href="#join" class="px-6 py-3 border border-gray-700 text-gray-300 font-medium rounded-lg hover:bg-gray-800/50 transition-all duration-300">
+        Join the Movement
+      </a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    <article class="prose prose-invert max-w-none">
+      <!-- Introduction -->
+      <section id="manifesto" class="mb-20">
+        <h2 class="text-3xl font-bold text-white mb-6">Preamble</h2>
+        <p class="text-gray-300 leading-relaxed">
+          In an era where digital platforms have become the new public squares, we find ourselves at a crossroads. The internet, once a beacon of open communication and innovation, has been co-opted by a handful of corporations that prioritize profit over people, surveillance over sovereignty, and control over collaboration.
+        </p>
+        <p class="text-gray-300 leading-relaxed">
+          Acratos emerges as a response to this digital dystopia—a decentralized network built on principles of sovereignty, privacy, and collective intelligence. We envision a future where technology serves humanity, not the other way around.
+        </p>
+      </section>
+
+      <!-- Core Principles -->
+      <section class="mb-20">
+        <h2 class="text-3xl font-bold text-white mb-8">Our Core Principles</h2>
+        
+        <div class="space-y-8">
+          <!-- Principle 1 -->
+          <div class="bg-gray-800/50 rounded-2xl p-8 border border-gray-700/50 hover:border-indigo-500/30 transition-all duration-300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-indigo-500/10 p-3 rounded-lg mr-6">
+                <svg class="h-8 w-8 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-3">1. Digital Sovereignty</h3>
+                <p class="text-gray-300 leading-relaxed">
+                  We believe in the fundamental right of individuals to own and control their digital identity, data, and online experience. In the Acratos network, you are the sole custodian of your digital life. No central authority can censor your speech, restrict your access, or appropriate the value you create.
+                </p>
+                <p class="text-gray-300 leading-relaxed mt-4">
+                  Our architecture ensures that your data remains under your control through end-to-end encryption and decentralized storage. You decide what to share, with whom, and under what terms.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Principle 2 -->
+          <div class="bg-gray-800/50 rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-purple-500/10 p-3 rounded-lg mr-6">
+                <svg class="h-8 w-8 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-3">2. Privacy by Design</h3>
+                <p class="text-gray-300 leading-relaxed">
+                  Privacy is not a feature—it's the foundation of trustworthy digital interactions. We implement cutting-edge cryptographic techniques to ensure that your communications, transactions, and data remain confidential and tamper-proof.
+                </p>
+                <p class="text-gray-300 leading-relaxed mt-4">
+                  Our zero-knowledge proofs and secure multi-party computation enable you to prove things about your data without revealing the data itself, creating a new paradigm of privacy-preserving applications.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Principle 3 -->
+          <div class="bg-gray-800/50 rounded-2xl p-8 border border-gray-700/50 hover:border-pink-500/30 transition-all duration-300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-pink-500/10 p-3 rounded-lg mr-6">
+                <svg class="h-8 w-8 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-3">3. Radical Decentralization</h3>
+                <p class="text-gray-300 leading-relaxed">
+                  We reject the concentration of power in the hands of the few. The Acratos network is built on a foundation of radical decentralization, where no single entity can control or censor the network.
+                </p>
+                <p class="text-gray-300 leading-relaxed mt-4">
+                  Our distributed architecture ensures resilience against censorship, single points of failure, and malicious actors. By distributing trust across a global network of nodes, we create a system that is antifragile and self-sustaining.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Principle 4 -->
+          <div class="bg-gray-800/50 rounded-2xl p-8 border border-gray-700/50 hover:border-amber-500/30 transition-all duration-300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-amber-500/10 p-3 rounded-lg mr-6">
+                <svg class="h-8 w-8 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-3">4. Universal Accessibility</h3>
+                <p class="text-gray-300 leading-relaxed">
+                  Decentralized technology must be accessible to all, regardless of geographic location, economic means, or technical expertise. We are committed to building intuitive interfaces and developer tools that lower the barriers to entry.
+                </p>
+                <p class="text-gray-300 leading-relaxed mt-4">
+                  Our documentation, educational resources, and community support ensure that anyone can participate in and benefit from the decentralized web, regardless of their background or experience level.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Principle 5 -->
+          <div class="bg-gray-800/50 rounded-2xl p-8 border border-gray-700/50 hover:border-emerald-500/30 transition-all duration-300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-emerald-500/10 p-3 rounded-lg mr-6">
+                <svg class="h-8 w-8 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-3">5. Sustainability & Resilience</h3>
+                <p class="text-gray-300 leading-relaxed">
+                  We are building for the long term, with a commitment to environmental sustainability and network resilience. Our consensus mechanisms and infrastructure are designed to be energy-efficient and environmentally responsible.
+                </p>
+                <p class="text-gray-300 leading-relaxed mt-4">
+                  By optimizing for efficiency and minimizing waste, we ensure that the Acratos network can scale to serve billions of users without compromising on performance or environmental impact.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section id="join" class="text-center py-16">
+        <h2 class="text-3xl font-bold text-white mb-6">Join the Movement</h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+          The future of the internet is being built today. Will you help us shape it?
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/#start-building" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-lg text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5">
+            Start Building
+            <svg class="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+          <a href="https://github.com/yourusername/acratos" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 border border-gray-700 text-base font-medium rounded-lg text-white bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 hover:border-gray-600">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </section>
+    </article>
+  </div>
+</MainLayout>
+
+<style is:global>
+  .prose {
+    --tw-prose-body: #d1d5db;
+    --tw-prose-headings: #ffffff;
+    --tw-prose-lead: #9ca3af;
+    --tw-prose-links: #ffffff;
+    --tw-prose-bold: #ffffff;
+    --tw-prose-counters: #9ca3af;
+    --tw-prose-bullets: #4b5563;
+    --tw-prose-hr: #374151;
+    --tw-prose-quotes: #f3f4f6;
+    --tw-prose-quote-borders: #374151;
+    --tw-prose-captions: #9ca3af;
+    --tw-prose-code: #ffffff;
+    --tw-prose-pre-code: #e5e7eb;
+    --tw-prose-pre-bg: #111827;
+    --tw-prose-th-borders: #4b5563;
+    --tw-prose-td-borders: #374151;
+  }
+  
+  .prose a {
+    color: #a78bfa;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .prose a:hover {
+    color: #8b5cf6;
+    text-decoration: underline;
+  }
+  
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    color: var(--tw-prose-headings);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  
+  .prose h2 {
+    font-size: 1.875rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .prose h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .prose p {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    line-height: 1.75;
+  }
+  
+  .prose-invert {
+    color: var(--tw-prose-body);
+  }
+  
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Animation for section transitions */
+  section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script is:inline>
+  // Intersection Observer to trigger animations
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+    
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>

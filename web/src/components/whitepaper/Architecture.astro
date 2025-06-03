@@ -519,9 +519,89 @@
             </div>
           </div>
           
-          <button class="w-full mt-6 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-[1.02]">
-            Confirm and Execute
-          </button>
+          <div id="execution-container">
+            <button 
+              id="confirm-button"
+              class="w-full mt-6 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+              onclick="handleExecution()"
+            >
+              <span id="button-text">Confirm and Execute</span>
+              <span id="button-loading" class="hidden items-center justify-center">
+                <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Processing...
+              </span>
+            </button>
+            <div id="success-message" class="hidden mt-4 p-4 bg-green-500/10 border border-green-500/30 rounded-lg text-green-400 text-center">
+              <div class="flex items-center justify-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Transaction executed successfully!
+              </div>
+              <div class="mt-2 text-sm text-green-300">
+                <p>100 USDC converted to 0.042 ETH</p>
+                <p>Sent to david.eth</p>
+                <a href="#" class="text-green-200 hover:text-white underline text-xs mt-1 inline-block">View on explorer</a>
+              </div>
+            </div>
+          </div>
+          
+          <script is:inline>
+            function handleExecution() {
+              const button = document.getElementById('confirm-button');
+              const buttonText = document.getElementById('button-text');
+              const buttonLoading = document.getElementById('button-loading');
+              const successMessage = document.getElementById('success-message');
+              
+              // Show loading state
+              buttonText.classList.add('hidden');
+              buttonLoading.classList.remove('hidden');
+              button.disabled = true;
+              button.classList.remove('from-purple-600', 'to-indigo-600', 'hover:from-purple-500', 'hover:to-indigo-500');
+              button.classList.add('from-gray-500', 'to-gray-600', 'cursor-not-allowed');
+              
+              // Simulate API call/transaction
+              setTimeout(() => {
+                // Hide button and show success message
+                button.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+                
+                // Animate success message
+                successMessage.classList.add('animate-fade-in');
+                
+                // Optional: Reset after some time
+                setTimeout(() => {
+                  // Reset button state (uncomment if you want to make it reusable)
+                  /*
+                  buttonText.classList.remove('hidden');
+                  buttonLoading.classList.add('hidden');
+                  button.classList.remove('hidden', 'from-gray-500', 'to-gray-600', 'cursor-not-allowed');
+                  button.classList.add('from-purple-600', 'to-indigo-600', 'hover:from-purple-500', 'hover:to-indigo-500');
+                  button.disabled = false;
+                  successMessage.classList.add('hidden');
+                  */
+                }, 10000); // Reset after 10 seconds
+              }, 2000); // Simulate 2 second processing time
+            }
+            
+            // Add animation class
+            document.addEventListener('DOMContentLoaded', () => {
+              const style = document.createElement('style');
+              style.textContent = `
+                @keyframes fadeIn {
+                  from { opacity: 0; transform: translateY(10px); }
+                  to { opacity: 1; transform: translateY(0); }
+                }
+                .animate-fade-in {
+                  animation: fadeIn 0.5s ease-out forwards;
+                }
+              `;
+              document.head.appendChild(style);
+            });
+          </script>
         </div>
       </div>
     </div>
