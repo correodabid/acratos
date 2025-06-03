@@ -1,6 +1,6 @@
 ---
 // src/components/home/WhyAcratos.astro
-// Actualizado para Acratos
+// Actualizado para Acratos - Red de Agentes Soberanos
 import Section from '../ui/Section.astro';
 
 interface Props {
@@ -19,53 +19,44 @@ const { id = 'why-acratos', className = '' } = Astro.props;
 
 const benefits: Benefit[] = [
   {
-    title: 'True Ownership',
-    description: 'Your data, your rules. No intermediaries to exploit or sell it to the highest bidder.',
-    icon: '🔒',
+    title: 'Agentes Autónomos',
+    description: 'Cada usuario opera como un agente soberano con control total sobre sus datos y cómputos.',
+    icon: '🤖',
     color: 'indigo'
   },
   {
-    title: 'Fair Economy',
-    description: 'Up to 95% of revenue goes to creators. No platforms taking the lion\'s share.',
-    icon: '💰',
-    color: 'amber'
-  },
-  {
-    title: 'No Censorship',
-    description: 'Freedom of expression without fear of demonetization or arbitrary bans.',
-    icon: '🗣️',
-    color: 'rose'
-  },
-  {
-    title: 'Privacy by Design',
-    description: 'End-to-end encryption. Your information is never sold or shared.',
-    icon: '🛡️',
-    color: 'emerald'
-  },
-  {
-    title: 'High Performance',
-    description: 'Fast and scalable transactions thanks to our innovative architecture.',
-    icon: '⚡',
+    title: 'IA Distribuida',
+    description: 'Modelos de IA ejecutados de forma descentralizada entre múltiples nodos para mayor eficiencia.',
+    icon: '🧠',
     color: 'purple'
   },
   {
-    title: 'Interoperable',
-    description: 'Connect with other networks and take your identity and assets with you.',
-    icon: '🔗',
+    title: 'Cómputo Verificable',
+    description: 'Pruebas criptográficas que validan todas las operaciones, asegurando transparencia y confianza.',
+    icon: '🔍',
+    color: 'emerald'
+  },
+  {
+    title: 'Mercado de Cómputo',
+    description: 'Sistema de intercambio descentralizado para recursos computacionales entre agentes.',
+    icon: '⚖️',
+    color: 'amber'
+  },
+  {
+    title: 'Identidad Soberana',
+    description: 'Control total sobre tu identidad digital sin depender de terceros.',
+    icon: '🆔',
     color: 'cyan'
+  },
+  {
+    title: 'Colaboración Segura',
+    description: 'Los agentes pueden colaborar manteniendo privacidad y seguridad en todas las interacciones.',
+    icon: '🤝',
+    color: 'rose'
   }
 ];
 
 // Mapeo de colores a clases de Tailwind
-const cardClasses = {
-  indigo: 'border-indigo-500/20 hover:border-indigo-500/40',
-  amber: 'border-amber-500/20 hover:border-amber-500/40',
-  rose: 'border-rose-500/20 hover:border-rose-500/40',
-  emerald: 'border-emerald-500/20 hover:border-emerald-500/40',
-  purple: 'border-purple-500/20 hover:border-purple-500/40',
-  cyan: 'border-cyan-500/20 hover:border-cyan-500/40'
-};
-
 const iconClasses = {
   indigo: 'bg-indigo-500/10 text-indigo-400',
   amber: 'bg-amber-500/10 text-amber-400',
@@ -74,33 +65,44 @@ const iconClasses = {
   purple: 'bg-purple-500/10 text-purple-400',
   cyan: 'bg-cyan-500/10 text-cyan-400'
 };
+
+const borderHoverClasses = {
+  indigo: 'hover:border-indigo-500/50',
+  amber: 'hover:border-amber-500/50',
+  rose: 'hover:border-rose-500/50',
+  emerald: 'hover:border-emerald-500/50',
+  purple: 'hover:border-purple-500/50',
+  cyan: 'hover:border-cyan-500/50'
+};
 ---
 
 <Section 
   id={id}
-  title="Why Acratos?"
-  subtitle="Join the decentralized web revolution with Acratos. Take control of your digital experience."
+  title="¿Por qué Acratos?"
+  subtitle="La próxima generación de IA descentralizada donde cada agente es soberano y colaborativo."
   gradientFrom="from-indigo-400"
   gradientTo="to-purple-400"
-  className="bg-gradient-to-br from-gray-900 to-gray-950"
+  className="bg-gradient-to-br from-gray-900 via-gray-950 to-gray-900"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Grid de Beneficios -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {benefits.map((benefit, index) => (
+      {benefits.map((benefit: Benefit, index: number) => (
         <div 
-          data-key={index}
-          class={`relative p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-${benefit.color}-500/50 transition-all duration-300 group overflow-hidden`}
+          key={index}
+          class={`relative p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 transition-all duration-300 group overflow-hidden ${borderHoverClasses[benefit.color]}`}
         >
           <div class="flex items-start">
             <div class={`w-14 h-14 rounded-xl flex items-center justify-center text-2xl mr-4 ${iconClasses[benefit.color]} transition-colors duration-300`}>
               {benefit.icon}
             </div>
             <div>
-              <h4 class="text-3xl md:text-4xl font-bold text-white mb-6">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">{benefit.title}</span>
+              <h4 class="text-2xl font-bold text-white mb-3">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                  {benefit.title}
+                </span>
               </h4>
-              <p class="text-gray-300">
+              <p class="text-gray-300 text-sm">
                 {benefit.description}
               </p>
             </div>
@@ -112,12 +114,12 @@ const iconClasses = {
     <!-- Botón de llamada a la acción -->
     <div class="mt-16 text-center">
       <a 
-        href="#use-cases" 
-        class="inline-flex items-center px-8 py-4 text-base font-medium rounded-full text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 shadow-lg hover:shadow-indigo-500/30 transition-all duration-300 transform hover:-translate-y-1"
+        href="#technology" 
+        class="inline-flex items-center px-8 py-4 text-base font-medium rounded-full text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 shadow-lg hover:shadow-indigo-500/30 transition-all duration-300 transform hover:-translate-y-1 group"
       >
-        Ver Casos de Uso
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        Explorar la Tecnología
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
         </svg>
       </a>
     </div>

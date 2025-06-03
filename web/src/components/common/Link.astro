@@ -1,0 +1,29 @@
+---
+interface Props {
+  href: string;
+  class?: string;
+  [key: string]: any;
+}
+
+const { href, class: className = '', ...rest } = Astro.props;
+
+// Si es un enlace externo o un enlace con hash, usarlo tal cual
+const isExternal = href.startsWith('http') || href.startsWith('//');
+const isHashLink = href.startsWith('#');
+
+// Para enlaces internos, asegurarse de que comiencen con /
+let finalHref = href;
+if (!isExternal && !isHashLink && !href.startsWith('/')) {
+  finalHref = `/${href}`;
+}
+---
+
+{isExternal || isHashLink ? (
+  <a href={finalHref} class={className} {...rest}>
+    <slot />
+  </a>
+) : (
+  <a href={finalHref} class={className} data-astro-prefetch {...rest}>
+    <slot />
+  </a>
+)}

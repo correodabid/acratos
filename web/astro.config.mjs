@@ -2,9 +2,8 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://correodabid.github.io',
+  site: 'https://correodabid.github.io/acratos',
   base: '/acratos',
   integrations: [tailwind()],
   output: 'static',
@@ -12,6 +11,7 @@ export default defineConfig({
     assets: 'assets',
   },
   vite: {
+    base: '/acratos/',
     build: {
       assetsInlineLimit: 0,
     },
