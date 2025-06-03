@@ -5,6 +5,7 @@ export default defineConfig({
   base: '/acratos/',
   build: {
     assetsDir: '_astro',
+    emptyOutDir: true,
     rollupOptions: {
       output: {
         assetFileNames: '_astro/[name][extname]',
@@ -18,4 +19,19 @@ export default defineConfig({
       '/@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  server: {
+    fs: {
+      strict: false
+    },
+    base: '/acratos/'
+  },
+  publicDir: 'public',
+  plugins: [
+    {
+      name: 'html-transform',
+      transformIndexHtml(html) {
+        return html.replace(/(href|src)="\/(?!\/)/g, '$1="/acratos/');
+      }
+    }
+  ]
 });

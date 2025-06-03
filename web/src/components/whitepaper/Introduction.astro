@@ -345,7 +345,7 @@ const CHALLENGES: CardItem[] = [
           </span>
         </h2>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Acratos is not just another network—it's a fundamental reimagining of the internet where intelligence is native, sovereignty is built-in, and value flows directly to creators through autonomous agents.
+          Acratos is not just another network—it's a fundamental reimagining of the internet where intelligence is native, sovereignty is built-in, and value flows directly to creators through autonomous agents. By embedding AI at the protocol level, we're creating a web that doesn't just connect information, but understands it.
         </p>
       </div>
       
@@ -473,11 +473,11 @@ const CHALLENGES: CardItem[] = [
           <span class="inline-block bg-purple-500/10 text-purple-400 text-sm font-medium px-4 py-1.5 rounded-full mb-6 tracking-wide">OUR PRINCIPLES</span>
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-500">
-              Core Principles of Digital Sovereignty
+              Intelligent Digital Sovereignty
             </span>
           </h2>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            The fundamental principles that guide every aspect of Acratos Network and its community.
+            The core principles that define how Acratos embeds intelligence at its foundation while ensuring user sovereignty and network resilience.
           </p>
         </div>
         
@@ -532,20 +532,36 @@ const CHALLENGES: CardItem[] = [
               number: '10',
               title: 'This network is not a product. It is a possibility',
               description: 'A space for new ways of living, deciding, and creating without asking for permission to flourish.'
+            },
+            {
+              number: '11',
+              title: 'Decentralized Intelligence',
+              description: 'AI models collaborate across the network, creating emergent intelligence greater than any single node.'
+            },
+            {
+              number: '12',
+              title: 'Privacy-Preserving Learning',
+              description: 'Machine learning that improves through collective intelligence while keeping individual data private and secure.'
             }
           ].map((principle, index) => (
             <div 
               data-key={`principle-${index}`}
-              class="group relative p-6 rounded-2xl bg-gradient-to-br from-gray-800/30 to-gray-900/30 border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/5"
+              class={`group relative p-6 rounded-2xl bg-gradient-to-br from-gray-800/30 to-gray-900/30 border border-gray-700/50 hover:border-${principle.number === '01' ? 'indigo' : 'purple'}-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-${principle.number === '01' ? 'indigo' : 'purple'}-500/5`}
             >
-              <span class="absolute -top-4 -left-4 w-10 h-10 flex items-center justify-center rounded-full bg-purple-500 text-white font-bold text-lg">
+              <span class={`absolute -top-4 -left-4 w-10 h-10 flex items-center justify-center rounded-full ${principle.number === '01' ? 'bg-gradient-to-br from-indigo-500 to-cyan-500' : 'bg-purple-500'} text-white font-bold text-lg`}>
                 {principle.number}
               </span>
-              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+              <h3 class={`text-xl font-bold ${principle.number === '01' ? 'text-indigo-300' : 'text-white'} mb-3 group-hover:${principle.number === '01' ? 'text-indigo-200' : 'text-purple-400'} transition-colors`}>
                 {principle.title}
               </h3>
               <p class="text-gray-400 text-sm leading-relaxed">
                 {principle.description}
+                {principle.number === '01' && (
+                  <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="text-xs px-2 py-1 rounded-full bg-indigo-500/10 text-indigo-300">AI-First Protocol</span>
+                    <span class="text-xs px-2 py-1 rounded-full bg-indigo-500/10 text-indigo-300">Native Intelligence</span>
+                  </div>
+                )}
               </p>
             </div>
           ))}

@@ -4,11 +4,13 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "rm -rf ../docs/* && astro build && cp -R dist/. ../docs/ && cp -R public/. ../docs/ 2>/dev/null || true && echo '' > ../docs/.nojekyll",
+    "build": "rm -rf ../docs/* && astro build && cp -R dist/. ../docs/ && cp -R public/. ../docs/ 2>/dev/null || true && echo '' > ../docs/.nojekyll && node fix-paths.js",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "fix-paths": "node fix-paths.js"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.4.0",
     "@astrojs/tailwind": "^6.0.2",
     "@types/aos": "^3.0.7",
     "aos": "^2.3.4",
@@ -16,11 +18,11 @@
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
+    "@astrojs/vercel": "^5.1.6",
     "@types/node": "^22.15.29",
     "@vitejs/plugin-basic-ssl": "^2.0.0",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.4.38",
-    "vite": "^5.2.8",
-    "@astrojs/vercel": "^5.1.6"
+    "vite": "^5.2.8"
   }
 }
