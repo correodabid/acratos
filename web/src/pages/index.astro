@@ -81,67 +81,6 @@ const features = [
 ];
 ---
 
-<!-- Particles Effect -->
-<!-- <script>
-  // Efecto de partículas inspirado en Solana
-  document.addEventListener('DOMContentLoaded', () => {
-    const canvas = document.getElementById('particles');
-    if (!canvas) return;
-    
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    
-    const particles = [];
-    const particleCount = window.innerWidth < 768 ? 50 : 100;
-    
-    // Crear partículas
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        size: Math.random() * 2 + 1,
-        speedX: Math.random() * 0.5 - 0.25,
-        speedY: Math.random() * 0.5 - 0.25,
-        color: `rgba(99, 102, 241, ${Math.random() * 0.2 + 0.05})`
-      });
-    }
-    
-    // Animar partículas
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      for (let i = 0; i < particles.length; i++) {
-        const p = particles[i];
-        
-        // Actualizar posición
-        p.x += p.speedX;
-        p.y += p.speedY;
-        
-        // Rebotar en los bordes
-        if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
-        if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
-        
-        // Dibujar partícula
-        ctx.fillStyle = p.color;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fill();
-      }
-      
-      requestAnimationFrame(animate);
-    }
-    
-    animate();
-    
-    // Manejar redimensionado
-    window.addEventListener('resize', () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    });
-  });
-</script> -->
-
 <MainLayout {title} {description}>
   <!-- Fondo con gradiente y partículas (optimizado) -->
   <div class="fixed inset-0 -z-10">
@@ -254,7 +193,7 @@ const features = [
             </div>
             
             <!-- Trust indicators -->
-            <div class="mt-12 pt-8 border-t border-gray-800/50">
+            <!-- <div class="mt-12 pt-8 border-t border-gray-800/50">
               <p class="text-sm text-gray-500 mb-4">Join a growing community</p>
               <div class="flex flex-wrap justify-center items-center gap-6 opacity-80 hover:opacity-100 transition-opacity">
                 <div class="text-gray-300">Supported by:</div>
@@ -264,7 +203,7 @@ const features = [
                 <div class="text-2xl font-bold text-white">•</div>
                 <div class="text-2xl font-bold text-white">Arweave</div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>

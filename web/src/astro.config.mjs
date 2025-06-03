@@ -9,25 +9,25 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
   build: {
-    assets: '', // Usar raíz en lugar de _astro
+    assets: 'assets',
   },
   vite: {
-    base: '', // Usar ruta relativa
+    base: '/acratos/',
     build: {
       assetsInlineLimit: 0,
       rollupOptions: {
         output: {
-          assetFileNames: '[name][extname]', // Sin prefijo de directorio
-          chunkFileNames: '[name].[hash].js',
-          entryFileNames: '[name].[hash].js',
+          assetFileNames: 'assets/[name][extname]',
+          chunkFileNames: 'assets/[name].[hash].js',
+          entryFileNames: 'assets/[name].[hash].js',
         },
       },
     },
   },
-  // Configuración específica para GitHub Pages
+  // Desactivar prefijos de ruta para assets
   experimental: {
     assets: {
-      staticMode: true,
+      staticMode: false,
     },
   },
 });
