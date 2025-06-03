@@ -9,10 +9,9 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
   build: {
-    assets: 'acratos/_astro',
+    assets: '_astro',
   },
   vite: {
-    base: '/acratos/',
     build: {
       assetsInlineLimit: 0,
     },
