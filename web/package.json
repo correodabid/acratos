@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "rm -rf ../docs/* && astro build && cp -R dist/. ../docs/ && cp -R public/. ../docs/ 2>/dev/null || true && touch ../docs/.nojekyll",
+    "build": "rm -rf ../docs/* && astro build && cp -R dist/. ../docs/ && cp -R public/. ../docs/ 2>/dev/null || true && echo '' > ../docs/.nojekyll",
     "preview": "astro preview",
     "astro": "astro"
   },

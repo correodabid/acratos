@@ -13,6 +13,7 @@ export default defineConfig({
     format: 'file',
   },
   vite: {
+    base: '/acratos/',
     build: {
       assetsInlineLimit: 0,
       rollupOptions: {
@@ -22,6 +23,13 @@ export default defineConfig({
           assetFileNames: 'assets/[name].[hash][extname]',
         },
       },
+    },
+  },
+  // Configuración para asegurar que las rutas sean correctas en producción
+  experimental: {
+    assets: {
+      // Usar rutas relativas para los assets
+      staticMode: false,
     },
   },
 });
