@@ -12,7 +12,7 @@ export default defineConfig({
     assets: '_astro',
   },
   vite: {
-    configFile: './vite.config.js',
+    configFile: '../vite.config.js',
   },
   experimental: {
     assets: {
