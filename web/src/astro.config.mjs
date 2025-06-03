@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://correodabid.github.io',
+  site: 'https://correodabid.github.io/acratos',
   base: '/acratos',
   integrations: [tailwind()],
   output: 'static',
@@ -12,14 +12,14 @@ export default defineConfig({
     assets: '_astro',
   },
   vite: {
-    base: '/acratos',
+    base: '/acratos/',
     build: {
       assetsInlineLimit: 0,
       rollupOptions: {
         output: {
-          assetFileNames: '_astro/[name][extname]',
-          chunkFileNames: '_astro/[name].[hash].js',
-          entryFileNames: '_astro/[name].[hash].js',
+          assetFileNames: 'assets/[name][extname]',
+          chunkFileNames: 'assets/[name].[hash].js',
+          entryFileNames: 'assets/[name].[hash].js',
         },
       },
     },
