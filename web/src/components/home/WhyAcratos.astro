@@ -19,38 +19,38 @@ const { id = 'why-acratos', className = '' } = Astro.props;
 
 const benefits: Benefit[] = [
   {
-    title: 'Agentes Autónomos',
-    description: 'Cada usuario opera como un agente soberano con control total sobre sus datos y cómputos.',
-    icon: '🤖',
+    title: 'Native Intelligence Layer',
+    description: 'AI is not just an application but a fundamental protocol layer, enabling intelligent interactions at the network level.',
+    icon: '🌐',
     color: 'indigo'
   },
   {
-    title: 'IA Distribuida',
-    description: 'Modelos de IA ejecutados de forma descentralizada entre múltiples nodos para mayor eficiencia.',
-    icon: '🧠',
+    title: 'Sovereign Agents',
+    description: 'Autonomous digital entities with self-ownership, capable of making decisions and interacting independently.',
+    icon: '🤖',
     color: 'purple'
   },
   {
-    title: 'Cómputo Verificable',
-    description: 'Pruebas criptográficas que validan todas las operaciones, asegurando transparencia y confianza.',
-    icon: '🔍',
+    title: 'Decentralized Reasoning',
+    description: 'Distributed AI models that collaborate and reason across the network, creating emergent intelligence.',
+    icon: '🧠',
     color: 'emerald'
   },
   {
-    title: 'Mercado de Cómputo',
-    description: 'Sistema de intercambio descentralizado para recursos computacionales entre agentes.',
-    icon: '⚖️',
+    title: 'Agent Economy',
+    description: 'A self-sustaining ecosystem where AI agents can trade services, data, and computational resources.',
+    icon: '💱',
     color: 'amber'
   },
   {
-    title: 'Identidad Soberana',
-    description: 'Control total sobre tu identidad digital sin depender de terceros.',
-    icon: '🆔',
+    title: 'Zero-Knowledge Privacy',
+    description: 'Prove statements about data without revealing the data itself, enabling private interactions.',
+    icon: '🔒',
     color: 'cyan'
   },
   {
-    title: 'Colaboración Segura',
-    description: 'Los agentes pueden colaborar manteniendo privacidad y seguridad en todas las interacciones.',
+    title: 'Collective Learning',
+    description: 'Federated learning that improves models across the network while preserving data privacy.',
     icon: '🤝',
     color: 'rose'
   }
@@ -78,8 +78,8 @@ const borderHoverClasses = {
 
 <Section 
   id={id}
-  title="¿Por qué Acratos?"
-  subtitle="La próxima generación de IA descentralizada donde cada agente es soberano y colaborativo."
+  title="The Intelligent Web"
+  subtitle="A new paradigm where intelligence is native to the network, enabling autonomous agents to collaborate at internet scale"
   gradientFrom="from-indigo-400"
   gradientTo="to-purple-400"
   className="bg-gradient-to-br from-gray-900 via-gray-950 to-gray-900"
@@ -93,8 +93,8 @@ const borderHoverClasses = {
           class={`relative p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 transition-all duration-300 group overflow-hidden ${borderHoverClasses[benefit.color]}`}
         >
           <div class="flex items-start">
-            <div class={`w-14 h-14 rounded-xl flex items-center justify-center text-2xl mr-4 ${iconClasses[benefit.color]} transition-colors duration-300`}>
-              {benefit.icon}
+            <div class={`w-14 h-14 rounded-xl flex items-center justify-center text-3xl mr-4 ${iconClasses[benefit.color]} transition-colors duration-300`}>
+              <span class="block" aria-hidden="true">{benefit.icon}</span>
             </div>
             <div>
               <h4 class="text-2xl font-bold text-white mb-3">
@@ -117,7 +117,7 @@ const borderHoverClasses = {
         href="#technology" 
         class="inline-flex items-center px-8 py-4 text-base font-medium rounded-full text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 shadow-lg hover:shadow-indigo-500/30 transition-all duration-300 transform hover:-translate-y-1 group"
       >
-        Explorar la Tecnología
+        Explore the Technology
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
         </svg>
