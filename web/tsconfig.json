@@ -27,7 +27,8 @@
     "src/**/*.tsx",
     "src/**/*.astro",
     "src/**/*.js",
-    "src/**/*.jsx"
-, "astro.config.mjs"  ],
+    "src/**/*.jsx",
+    "src/astro.config.mjs"
+  ],
   "exclude": ["node_modules", "dist"]
 }
