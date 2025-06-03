@@ -9,22 +9,22 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
   build: {
-    assets: '_astro',
+    assets: '', // Usar raíz en lugar de _astro
   },
   vite: {
-    base: './',
+    base: '', // Usar ruta relativa
     build: {
       assetsInlineLimit: 0,
       rollupOptions: {
         output: {
-          assetFileNames: 'assets/[name][extname]',
-          chunkFileNames: 'assets/[name].[hash].js',
-          entryFileNames: 'assets/[name].[hash].js',
+          assetFileNames: '[name][extname]', // Sin prefijo de directorio
+          chunkFileNames: '[name].[hash].js',
+          entryFileNames: '[name].[hash].js',
         },
       },
     },
   },
-  // Forzar rutas relativas para todos los assets
+  // Configuración específica para GitHub Pages
   experimental: {
     assets: {
       staticMode: true,
