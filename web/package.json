@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "rm -rf ../docs/* && astro build && cp -R dist/. ../docs/ && touch ../docs/.nojekyll",
+    "build": "rm -rf ../docs/* && astro build && cp -R dist/. ../docs/ && cp -R public/. ../docs/ 2>/dev/null || true && touch ../docs/.nojekyll",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -19,7 +19,8 @@
     "@types/node": "^22.15.29",
     "@vitejs/plugin-basic-ssl": "^2.0.0",
     "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.4",
-    "sass": "^1.89.1"
+    "postcss": "^8.4.38",
+    "vite": "^5.2.8",
+    "@astrojs/vercel": "^5.1.6"
   }
 }

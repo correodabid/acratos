@@ -5,13 +5,12 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://correodabid.github.io',
-  base: '/acratos/',
+  base: '/acratos',
   integrations: [tailwind()],
   output: 'static',
   build: {
     assets: 'assets',
-    inlineStylesheets: 'always',
-    format: 'directory',
+    format: 'file',
   },
   vite: {
     build: {
