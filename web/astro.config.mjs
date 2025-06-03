@@ -24,10 +24,4 @@ export default defineConfig({
       },
     },
   },
-  // Desactivar prefijos de ruta para assets
-  experimental: {
-    assets: {
-      staticMode: false,
-    },
-  },
 });

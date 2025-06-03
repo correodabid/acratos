@@ -28,6 +28,6 @@
     "src/**/*.astro",
     "src/**/*.js",
     "src/**/*.jsx"
-  ],
+, "astro.config.mjs"  ],
   "exclude": ["node_modules", "dist"]
 }
