@@ -1,6 +1,5 @@
 # Permitir recursos estáticos
-/acratos/_astro/*
-/acratos/assets/*
+/_astro/*
 
 # Redirigir rutas de la aplicación a index.html
 /*    /acratos/index.html   200
