@@ -9,27 +9,12 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
   build: {
-    assets: 'assets',
-    format: 'file',
+    assets: '_astro',
   },
   vite: {
     base: '/acratos/',
     build: {
       assetsInlineLimit: 0,
-      rollupOptions: {
-        output: {
-          entryFileNames: 'assets/[name].[hash].js',
-          chunkFileNames: 'assets/[name].[hash].js',
-          assetFileNames: 'assets/[name].[hash][extname]',
-        },
-      },
-    },
-  },
-  // Configuración para asegurar que las rutas sean correctas en producción
-  experimental: {
-    assets: {
-      // Usar rutas relativas para los assets
-      staticMode: false,
     },
   },
 });
