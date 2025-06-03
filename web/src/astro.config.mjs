@@ -24,4 +24,10 @@ export default defineConfig({
       },
     },
   },
+  // Forzar rutas relativas para todos los assets
+  experimental: {
+    assets: {
+      staticMode: true,
+    },
+  },
 });
